@@ -6,20 +6,20 @@
   <title>Вера Свешникова — Learning Experience Portfolio</title>
   <style>
     :root {
-      --bg: #f5f7fb;
-      --surface: #ffffff;
-      --surface-2: #f8fbff;
-      --text: #171a22;
-      --muted: #6a7282;
-      --line: #e7edf6;
-      --accent: #5c6bff;
-      --accent-2: #8fb7ff;
-      --accent-soft: #eef2ff;
-      --shadow: 0 18px 50px rgba(17, 24, 39, 0.08);
-      --radius-xl: 32px;
-      --radius-lg: 24px;
-      --radius-md: 18px;
-      --max: 1180px;
+      --bg: #f7f6f2;
+      --paper: #fffdfa;
+      --panel: #ffffff;
+      --ink: #1c1d1f;
+      --muted: #5f6470;
+      --line: #e8e3d9;
+      --accent: #2f6f3e;
+      --accent-2: #ffcb05;
+      --soft: #f1f5ee;
+      --shadow: 0 20px 60px rgba(31, 35, 41, 0.08);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --max: 1160px;
     }
 
     * { box-sizing: border-box; }
@@ -27,12 +27,9 @@
     body {
       margin: 0;
       font-family: Inter, "Segoe UI", Arial, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(92,107,255,0.07), transparent 22%),
-        radial-gradient(circle at top right, rgba(143,183,255,0.10), transparent 20%),
-        linear-gradient(180deg, #fbfdff 0%, var(--bg) 100%);
-      line-height: 1.55;
+      color: var(--ink);
+      background: linear-gradient(180deg, #faf8f3 0%, #f7f6f2 100%);
+      line-height: 1.6;
     }
 
     a { color: inherit; text-decoration: none; }
@@ -45,26 +42,25 @@
     .nav {
       position: sticky;
       top: 0;
-      z-index: 30;
-      background: rgba(251, 253, 255, 0.88);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(23, 26, 34, 0.05);
+      z-index: 20;
+      background: rgba(250, 248, 243, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(28, 29, 31, 0.06);
     }
 
     .nav-inner {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 16px;
-      padding: 14px 0;
+      padding: 16px 0;
     }
 
     .brand {
       display: flex;
       align-items: center;
       gap: 12px;
-      font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: -0.01em;
     }
 
@@ -74,54 +70,54 @@
       border-radius: 14px;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, var(--accent), #7f8cff);
+      background: var(--ink);
       color: #fff;
-      box-shadow: 0 10px 24px rgba(92, 107, 255, 0.22);
+      font-size: 14px;
     }
 
     .nav-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 10px;
     }
 
     .nav-links a {
+      color: var(--muted);
       padding: 10px 14px;
       border-radius: 999px;
-      color: var(--muted);
       font-size: 14px;
-      transition: .2s ease;
+      transition: 0.2s ease;
     }
 
     .nav-links a:hover {
-      background: rgba(255,255,255,0.96);
-      color: var(--text);
-      box-shadow: 0 8px 18px rgba(17,24,39,0.05);
+      background: #fff;
+      color: var(--ink);
     }
 
     .hero {
-      padding: 36px 0 18px;
+      padding: 56px 0 18px;
     }
 
-    .hero-shell,
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .hero-main,
+    .hero-side,
     .section-card,
-    .work-card,
-    .contact-card {
-      background: rgba(255,255,255,0.94);
+    .contact-card,
+    .project-nav {
+      background: var(--panel);
       border: 1px solid var(--line);
       border-radius: var(--radius-xl);
       box-shadow: var(--shadow);
-      backdrop-filter: blur(14px);
     }
 
-    .hero-shell {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 22px;
-      padding: 30px;
-      background:
-        radial-gradient(circle at top left, rgba(92,107,255,0.08), transparent 24%),
-        linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,251,255,0.98));
+    .hero-main {
+      padding: 40px;
     }
 
     .eyebrow {
@@ -130,140 +126,134 @@
       gap: 8px;
       padding: 8px 12px;
       border-radius: 999px;
-      background: var(--accent-soft);
+      background: var(--soft);
       color: var(--accent);
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      margin-bottom: 14px;
+      margin-bottom: 18px;
     }
 
     h1 {
       margin: 0 0 14px;
-      font-size: clamp(34px, 4.8vw, 58px);
-      line-height: 0.95;
+      font-size: clamp(38px, 5vw, 72px);
+      line-height: 0.96;
       letter-spacing: -0.05em;
-      font-weight: 650;
       max-width: 10ch;
     }
 
-    .hero-copy {
-      font-size: 17px;
+    .hero-subtitle {
+      max-width: 720px;
+      font-size: 19px;
       color: var(--muted);
-      max-width: 58ch;
-      margin-bottom: 18px;
+      margin-bottom: 26px;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 18px;
+      gap: 12px;
+      margin-bottom: 28px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      padding: 13px 16px;
-      border-radius: 14px;
-      font-size: 14px;
-      font-weight: 500;
-      transition: .2s ease;
+      gap: 10px;
+      padding: 14px 18px;
+      border-radius: 16px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: 0.2s ease;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #151924, #262d3b);
+      background: var(--ink);
       color: #fff;
-      box-shadow: 0 12px 28px rgba(21,25,36,0.16);
     }
 
     .btn-secondary {
       background: #fff;
-      color: var(--text);
+      color: var(--ink);
       border: 1px solid var(--line);
     }
 
     .btn:hover { transform: translateY(-1px); }
 
-    .hero-stats {
+    .hero-metrics {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
     }
 
-    .stat {
-      padding: 14px;
+    .metric {
+      padding: 16px;
       border-radius: 18px;
-      background: rgba(255,255,255,0.8);
+      background: #faf9f6;
       border: 1px solid var(--line);
     }
 
-    .stat strong {
+    .metric strong {
       display: block;
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .stat span {
-      font-size: 12px;
-      color: var(--muted);
-      line-height: 1.45;
-    }
-
-    .hero-visual {
-      display: grid;
-      gap: 16px;
-      align-content: start;
-    }
-
-    .visual-card {
-      padding: 20px;
-      border-radius: 24px;
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(247,250,255,0.96));
-    }
-
-    .visual-label {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .visual-title {
-      margin: 0 0 10px;
       font-size: 24px;
-      line-height: 1.06;
-      letter-spacing: -0.03em;
-      font-weight: 620;
-      max-width: 13ch;
+      line-height: 1;
+      margin-bottom: 8px;
     }
 
-    .visual-text {
-      margin: 0;
+    .metric span {
+      display: block;
+      font-size: 13px;
       color: var(--muted);
-      font-size: 15px;
     }
 
-    .skill-cloud {
+    .hero-side {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .side-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .side-title {
+      margin: 8px 0 10px;
+      font-size: 28px;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .side-text,
+    .section-intro,
+    .body-text,
+    .list,
+    .contact-card p,
+    .footer-text {
+      color: var(--muted);
+    }
+
+    .chips {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 10px;
+      margin-top: 16px;
     }
 
-    .skill-cloud span {
-      padding: 8px 11px;
+    .chip {
+      padding: 9px 12px;
       border-radius: 999px;
-      background: var(--accent-soft);
-      border: 1px solid #dfe6ff;
-      font-size: 11px;
-      font-weight: 500;
+      background: var(--soft);
+      color: var(--ink);
+      font-size: 13px;
+      border: 1px solid #dde7da;
     }
 
     section {
@@ -279,161 +269,146 @@
     }
 
     .section-kicker {
-      font-size: 11px;
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.12em;
       color: var(--accent);
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 10px;
     }
 
     .section-title {
       margin: 0;
-      font-size: clamp(26px, 3vw, 38px);
-      line-height: 1.04;
+      font-size: clamp(28px, 3.1vw, 42px);
+      line-height: 1.02;
       letter-spacing: -0.04em;
-      font-weight: 640;
     }
 
-    .section-intro {
-      max-width: 60ch;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .work-grid {
+    .featured-layout {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      align-items: stretch;
+      grid-template-columns: 280px 1fr;
+      gap: 22px;
+      align-items: start;
     }
 
-    .work-card {
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
-      height: 100%;
-      background: linear-gradient(180deg, rgba(255,255,255,0.99), rgba(249,252,255,0.98));
+    .project-nav {
+      padding: 18px;
+      position: sticky;
+      top: 90px;
     }
 
-    .work-card::before {
-      content: "";
-      position: absolute;
-      inset: 0 0 auto 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-2));
-      opacity: 0.95;
-    }
-
-    .work-tag {
-      display: inline-flex;
-      align-items: center;
-      width: fit-content;
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      border: 1px solid #dfe6ff;
-      color: var(--accent);
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
+    .project-nav-title {
+      font-size: 14px;
+      font-weight: 700;
       margin-bottom: 12px;
     }
 
-    .work-card h3 {
-      margin: 0 0 10px;
-      font-size: 22px;
-      line-height: 1.12;
-      letter-spacing: -0.025em;
-      font-weight: 620;
-      min-height: 2.6em;
-      text-wrap: balance;
-    }
-
-    .work-card p {
-      margin: 0 0 14px;
+    .project-nav a {
+      display: block;
+      padding: 12px 14px;
+      border-radius: 14px;
       color: var(--muted);
-      font-size: 15px;
-      line-height: 1.55;
-      min-height: 4.7em;
+      margin-bottom: 8px;
+      border: 1px solid transparent;
     }
 
-    .work-points {
-      margin: 0 0 16px;
-      padding: 0;
-      list-style: none;
+    .project-nav a:hover {
+      background: #faf9f6;
+      color: var(--ink);
+      border-color: var(--line);
+    }
+
+    .section-stack {
       display: grid;
-      gap: 8px;
+      gap: 18px;
     }
 
-    .work-points li {
-      position: relative;
-      padding-left: 16px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.5;
+    .section-card {
+      padding: 28px;
     }
 
-    .work-points li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 9px;
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    .feature-banner {
+      padding: 28px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #2f6f3e 0%, #406a30 45%, #f3e7b2 100%);
+      color: #fff;
+      margin-bottom: 18px;
     }
 
-    .gallery {
-      margin-top: auto;
-      position: relative;
+    .feature-banner .mini {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.9;
+      margin-bottom: 12px;
+      font-weight: 700;
     }
 
-    .gallery-viewport {
+    .feature-banner h3 {
+      margin: 0 0 10px;
+      font-size: 34px;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      max-width: 14ch;
+    }
+
+    .feature-banner p {
+      margin: 0;
+      max-width: 62ch;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .mini-card {
+      padding: 20px;
+      background: #faf9f6;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+
+    .mini-card h4 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+    }
+
+    .media-frame {
       width: 100%;
-      height: 320px;
       min-height: 320px;
-      border-radius: 24px;
+      border-radius: 22px;
       border: 1px solid var(--line);
       background:
-        linear-gradient(180deg, rgba(255,255,255,0.97), rgba(245,249,255,0.99)),
-        radial-gradient(circle at top right, rgba(143,183,255,0.12), transparent 26%),
-        repeating-linear-gradient(45deg, #f7f9fd, #f7f9fd 16px, #eff4fb 16px, #eff4fb 32px);
-      position: relative;
+        linear-gradient(180deg, rgba(255,255,255,0.86), rgba(247,246,242,0.94)),
+        repeating-linear-gradient(
+          45deg,
+          #f5f2eb,
+          #f5f2eb 16px,
+          #f0ece4 16px,
+          #f0ece4 32px
+        );
       overflow: hidden;
-      box-shadow: 0 14px 34px rgba(17, 24, 39, 0.07);
-    }
-
-    .gallery-track {
-      display: flex;
-      width: 100%;
-      height: 100%;
-      transition: transform .35s ease;
-    }
-
-    .gallery-slide {
-      min-width: 100%;
-      width: 100%;
-      height: 100%;
       position: relative;
-      display: flex;
-      align-items: stretch;
-      justify-content: stretch;
-      flex: 0 0 100%;
+      box-shadow: var(--shadow);
     }
 
-    .gallery-slide img,
-    .gallery-image {
+    .media-frame--hero {
+      min-height: 420px;
+    }
+
+    .media-frame--wide {
+      min-height: 360px;
+    }
+
+    .media-frame img {
       width: 100%;
       height: 100%;
-      display: block;
       object-fit: cover;
-      object-position: center;
-      flex: 0 0 auto;
+      display: block;
     }
 
     .media-placeholder {
@@ -444,9 +419,15 @@
       justify-content: center;
       flex-direction: column;
       gap: 10px;
-      padding: 28px;
+      padding: 24px;
       text-align: center;
       color: var(--muted);
+    }
+
+    .media-placeholder strong {
+      color: var(--ink);
+      font-size: 16px;
+      letter-spacing: -0.01em;
     }
 
     .media-badge {
@@ -456,138 +437,87 @@
       padding: 8px 12px;
       border-radius: 999px;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.96);
-      color: var(--accent);
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .media-placeholder strong {
-      color: var(--text);
-      font-size: 15px;
-      font-weight: 620;
-      letter-spacing: -0.01em;
-      max-width: 18ch;
-    }
-
-    .gallery-caption {
-      margin-top: 10px;
+      background: rgba(255,255,255,0.86);
       font-size: 12px;
-      line-height: 1.45;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .media-caption {
+      margin-top: 10px;
+      font-size: 13px;
       color: var(--muted);
     }
 
-    .gallery-controls {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-top: 10px;
+    .section-gap {
+      margin-top: 18px;
     }
 
-    .gallery-dots {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
+    .list {
+      margin: 0;
+      padding-left: 18px;
     }
 
-    .gallery-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #cdd8ea;
-      border: none;
-      padding: 0;
-      cursor: pointer;
-      transition: .2s ease;
-    }
+    .list li { margin: 0 0 10px; }
 
-    .gallery-dot.is-active {
-      width: 22px;
-      background: var(--accent);
-    }
-
-    .gallery-nav {
-      display: flex;
-      gap: 8px;
-    }
-
-    .gallery-btn {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: #fff;
-      color: var(--text);
-      cursor: pointer;
+    .project-grid {
       display: grid;
-      place-items: center;
-      font-size: 14px;
-      transition: .2s ease;
-    }
-
-    .gallery-btn:hover {
-      background: var(--accent-soft);
-      color: var(--accent);
-    }
-
-    
-    .capability-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 1fr 1fr;
       gap: 18px;
     }
 
-    .capability-card {
-      padding: 20px;
-      background: rgba(255,255,255,0.94);
+    .project-link {
+      padding: 22px;
+      border-radius: 20px;
+      background: #fff;
       border: 1px solid var(--line);
-      border-radius: 22px;
       box-shadow: var(--shadow);
     }
 
-    .capability-card h3 {
+    .project-link .tag {
+      display: inline-flex;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .project-link h3 {
       margin: 0 0 8px;
-      font-size: 18px;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      font-weight: 620;
+      font-size: 24px;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
     }
 
-    .capability-card p {
+    .project-link p {
       margin: 0;
       color: var(--muted);
-      font-size: 14px;
-      line-height: 1.5;
     }
 
-    .about-grid {
+    .agile-strip {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 18px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-top: 16px;
     }
 
-    .section-card,
-    .contact-card {
-      padding: 24px;
+    .agile-step {
+      padding: 16px;
+      border-radius: 18px;
+      background: #faf9f6;
+      border: 1px solid var(--line);
     }
 
-    .section-card h3,
-    .contact-card h3 {
-      margin: 0 0 10px;
-      font-size: 22px;
-      line-height: 1.12;
-      letter-spacing: -0.025em;
-      font-weight: 620;
-    }
-
-    .section-card p,
-    .contact-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
+    .agile-step strong {
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 8px;
     }
 
     .contact-grid {
@@ -596,12 +526,16 @@
       gap: 18px;
     }
 
+    .contact-card {
+      padding: 24px;
+    }
+
     .contact-link {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       margin-top: 8px;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     footer {
@@ -614,18 +548,16 @@
       align-items: center;
       gap: 16px;
       padding: 20px 24px;
-      background: rgba(255,255,255,0.96);
+      background: #fff;
       border: 1px solid var(--line);
       border-radius: 22px;
       box-shadow: var(--shadow);
     }
 
-    .footer-text { color: var(--muted); }
-
     .reveal {
       opacity: 0;
       transform: translateY(16px);
-      transition: opacity .55s ease, transform .55s ease;
+      transition: opacity 0.55s ease, transform 0.55s ease;
     }
 
     .reveal.visible {
@@ -634,200 +566,43 @@
     }
 
     @media (max-width: 1080px) {
-      .hero-shell,
-      .work-grid,
-      .about-grid,
+      .hero-grid,
+      .featured-layout,
+      .two-col,
+      .project-grid,
       .contact-grid,
-      .capability-grid {
+      .agile-strip {
         grid-template-columns: 1fr;
       }
 
-      .hero-stats {
-        grid-template-columns: 1fr;
+      .project-nav {
+        position: static;
       }
     }
 
     @media (max-width: 760px) {
-      .container {
-        width: min(var(--max), calc(100% - 20px));
-      }
-
-      .nav {
-        position: static;
-      }
-
+      .container { width: min(var(--max), calc(100% - 24px)); }
       .nav-inner,
       .section-head,
-      .footer-box,
-      .gallery-controls {
+      .footer-box {
         flex-direction: column;
         align-items: flex-start;
       }
 
-      .nav-inner {
-        gap: 12px;
-        padding: 12px 0;
-      }
-
-      .nav-links {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-      }
-
-      .nav-links a {
-        text-align: center;
-        background: rgba(255,255,255,0.82);
-        border: 1px solid var(--line);
-      }
-
-      .hero {
-        padding: 18px 0 12px;
-      }
-
-      .hero-shell,
-      .work-card,
+      .hero-main,
+      .hero-side,
       .section-card,
       .contact-card,
-      .capability-card,
-      .visual-card {
-        padding: 18px;
+      .project-nav,
+      .project-link {
+        padding: 20px;
       }
 
-      .eyebrow {
-        font-size: 9px;
-        letter-spacing: 0.08em;
-        padding: 7px 10px;
-      }
-
-      h1 {
-        max-width: none;
-        font-size: clamp(28px, 9vw, 38px);
-        line-height: 0.98;
-      }
-
-      .hero-copy {
-        font-size: 15px;
-      }
-
-      .hero-actions {
-        width: 100%;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .visual-title {
-        font-size: 20px;
-        max-width: none;
-      }
-
-      .section-title {
-        font-size: 28px;
-        line-height: 1.08;
-      }
-
-      .section-intro {
-        font-size: 14px;
-      }
-
-      .work-card h3,
-      .section-card h3,
-      .contact-card h3 {
-        font-size: 20px;
-        min-height: 0;
-      }
-
-      .work-card p {
-        min-height: 0;
-        font-size: 14px;
-      }
-
-      .work-points li,
-      .capability-card p,
-      .section-card p,
-      .contact-card p,
-      .visual-text {
-        font-size: 14px;
-      }
-
-      .hero-stats,
-      .capability-grid,
-      .contact-grid,
-      .about-grid,
-      .work-grid {
-        gap: 14px;
-      }
-
-      .gallery-viewport {
-        height: 230px;
-        min-height: 230px;
-      }
-
-      .gallery-caption {
-        font-size: 11px;
-      }
-
-      .footer-box {
-        padding: 18px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .container {
-        width: calc(100% - 16px);
-      }
-
-      .nav-links {
+      .hero-metrics {
         grid-template-columns: 1fr;
       }
 
-      .brand-mark {
-        width: 38px;
-        height: 38px;
-      }
-
-      h1 {
-        font-size: 26px;
-      }
-
-      .hero-copy {
-        font-size: 14px;
-      }
-
-      .stat {
-        padding: 12px;
-      }
-
-      .stat strong {
-        font-size: 14px;
-      }
-
-      .stat span {
-        font-size: 11px;
-      }
-
-      .work-card,
-      .section-card,
-      .contact-card,
-      .capability-card,
-      .visual-card,
-      .hero-shell {
-        border-radius: 22px;
-      }
-
-      .gallery-viewport {
-        height: 210px;
-        min-height: 210px;
-        border-radius: 18px;
-      }
-
-      .gallery-btn {
-        width: 32px;
-        height: 32px;
-      }
+      h1 { max-width: none; }
     }
   </style>
 </head>
@@ -839,208 +614,259 @@
         <div>Вера Свешникова</div>
       </div>
       <div class="nav-links">
-        <a href="#work">Работы</a>
-        <a href="#approach">Подход</a>
-        <a href="#about">Обо мне</a>
+        <a href="#featured">Featured project</a>
+        <a href="#projects">Другие кейсы</a>
+        <a href="#approach">Agile-подход</a>
         <a href="#contact">Контакты</a>
       </div>
     </div>
   </nav>
 
   <header class="hero">
-    <div class="container">
-      <div class="hero-shell reveal">
-        <div>
-          <div class="eyebrow">Learning Experience • EdTech • Product mindset</div>
-          <h1>Проектирую обучение как реальный пользовательский опыт</h1>
-          <div class="hero-copy">
-            Создаю корпоративные обучающие решения, которые легко понять, пройти и применять в работе. Мой фокус — полный жизненный цикл learning product: исследование, структура, цифровая среда, запуск, использование и развитие.
+    <div class="container hero-grid">
+      <div class="hero-main reveal">
+        <div class="eyebrow">Learning Experience Design • Agile • Full cycle</div>
+        <h1>Проектирую обучение как продукт</h1>
+        <div class="hero-subtitle">
+          Я создаю обучающие решения через agile-подход: быстро собираю потребность, тестирую гипотезы, уточняю решение вместе со стейкхолдерами и довожу проект до работающего запуска.
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#featured">Смотреть featured project</a>
+          <a class="btn btn-secondary" href="#projects">Все кейсы</a>
+        </div>
+        <div class="hero-metrics">
+          <div class="metric">
+            <strong>Agile</strong>
+            <span>интервью → гипотезы → прототип → тестирование → доработка</span>
           </div>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#work">Смотреть работы</a>
-            <a class="btn btn-secondary" href="#contact">Связаться со мной</a>
+          <div class="metric">
+            <strong>Full cycle</strong>
+            <span>от диагностики и архитектуры решения до запуска и сопровождения</span>
           </div>
-          <div class="hero-stats">
-            <div class="stat">
-              <strong>Проектирование под аудиторию</strong>
-              <span>офис, руководители, экспертные сообщества, развитие после оценки</span>
-            </div>
-            <div class="stat">
-              <strong>Платформы и UX</strong>
-              <span>LMS / LXP, learning portals, навигация, контентная архитектура</span>
-            </div>
-            <div class="stat">
-              <strong>Learning product</strong>
-              <span>discovery, пилот, запуск, stakeholder alignment, итерации</span>
-            </div>
+          <div class="metric">
+            <strong>FMCG + Tech</strong>
+            <span>опыт в PepsiCo, РСХБ-Интех и проектной среде МИРИЛ</span>
           </div>
         </div>
+      </div>
 
-        <div class="hero-visual">
-          <div class="visual-card">
-            <div class="visual-label">Ценность для EdTech / LXP ролей</div>
-            <h2 class="visual-title">Соединяю бизнес-задачу, learner UX и digital delivery</h2>
-            <p class="visual-text">Сильнее всего я раскрываюсь в ролях, где обучение рассматривается как продукт: его нужно выстраивать вокруг потребностей пользователей, рабочих ограничений и реального использования.</p>
+      <div class="hero-side reveal">
+        <div>
+          <div class="side-label">Основной фокус</div>
+          <div class="side-title">Learning experience с быстрой итерацией</div>
+          <div class="side-text">
+            Мне ближе не «сделать курс и отдать», а собрать решение поэтапно: понять задачу бизнеса, разложить путь пользователя, проверить логику на реальных людях и только потом масштабировать.
           </div>
-
-          <div class="visual-card">
-            <div class="visual-label">Ключевой инструментарий</div>
-            <div class="skill-cloud">
-              <span>learning journeys</span>
-              <span>LMS / LXP</span>
-              <span>social learning</span>
-              <span>development maps</span>
-              <span>learning analytics</span>
-              <span>agile design</span>
-            </div>
-          </div>
+        </div>
+        <div class="chips">
+          <div class="chip">learning journeys</div>
+          <div class="chip">agile design</div>
+          <div class="chip">stakeholder interviews</div>
+          <div class="chip">peer learning</div>
+          <div class="chip">digital learning</div>
         </div>
       </div>
     </div>
   </header>
 
-  <section id="work">
+  <section id="featured">
+    <div class="container featured-layout">
+      <aside class="project-nav reveal">
+        <div class="project-nav-title">Структура featured project</div>
+        <a href="#challenge">01. Контекст и задача</a>
+        <a href="#agile-process">02. Agile-процесс</a>
+        <a href="#solution">03. Решение</a>
+        <a href="#impact">04. Результат</a>
+      </aside>
+
+      <div class="section-stack">
+        <div class="feature-banner reveal">
+          <div class="mini">Featured project • МИРИЛ</div>
+          <h3>Создание с нуля обучения для архитекторов</h3>
+          <p>Проект полного цикла: диагностика потребности, проектирование архитектуры обучения, сбор контента, digital-упаковка, пилотный запуск и доработка решения по обратной связи.</p>
+        </div>
+
+        <div class="reveal">
+          <div class="media-frame media-frame--hero">
+            <!-- Вставь сюда обложку featured project: скрин лендинга, структуры программы или key visual -->
+            <!-- Пример: <img src="images/miril-cover.jpg" alt="Обложка проекта обучения для архитекторов"> -->
+            <div class="media-placeholder">
+              <div class="media-badge">Featured project image</div>
+              <strong>Место для главного изображения проекта</strong>
+              <div>Лучше всего сюда поставить самый сильный скрин: обложку программы, схему маршрута или красивую страницу обучения.</div>
+            </div>
+          </div>
+          <div class="media-caption">Фиксированный контейнер: можно заменить плейсхолдер на изображение, и блок не поедет.</div>
+        </div>
+
+        <section class="section-card reveal" id="challenge">
+          <div class="section-kicker">01 • Контекст и задача</div>
+          <h2 class="section-title">Нужно было собрать обучение с нуля</h2>
+          <div class="body-text">
+            В бюро МИРИЛ стояла задача создать понятное и прикладное обучение для архитекторов. Нужно было не просто передать материалы, а выстроить путь входа в роль, объяснить стандарты работы и сделать обучение удобным для погружения в проектную среду.
+          </div>
+          <div class="two-col" style="margin-top:18px;">
+            <div class="mini-card">
+              <h4>Моя роль</h4>
+              <ul class="list">
+                <li>сбор запроса и уточнение контекста с бизнесом</li>
+                <li>проектирование структуры программы</li>
+                <li>упаковка материалов в цифровой формат</li>
+                <li>координация запуска и доработок</li>
+              </ul>
+            </div>
+            <div class="mini-card">
+              <h4>Что было важно</h4>
+              <ul class="list">
+                <li>учесть специфику аудитории архитекторов</li>
+                <li>не перегрузить сложным контентом на старте</li>
+                <li>сделать маршрут понятным и визуально чистым</li>
+                <li>дать возможность улучшать решение итеративно</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section-gap">
+            <div class="media-frame media-frame--wide">
+              <!-- Вставь сюда второй скрин: карта пути, этапы программы, страница с навигацией -->
+              <!-- Пример: <img src="images/miril-journey.jpg" alt="Структура и этапы программы"> -->
+              <div class="media-placeholder">
+                <div class="media-badge">Project image</div>
+                <strong>Место для изображения внутри кейса</strong>
+                <div>Подойдёт скрин схемы, дорожной карты, страницы с модулями или визуальной логики маршрута.</div>
+              </div>
+            </div>
+            <div class="media-caption">Этот блок рассчитан под широкое изображение и сохраняет стабильную высоту.</div>
+          </div>
+        </section>
+
+        <section class="section-card reveal" id="agile-process">
+          <div class="section-kicker">02 • Agile-процесс</div>
+          <h2 class="section-title">Работала короткими итерациями</h2>
+          <div class="section-intro">
+            Agile для меня — это не просто слово, а способ делать обучение ближе к реальности: быстро проверять гипотезы, уточнять маршрут и не уходить в долгую изоляцию от пользователя.
+          </div>
+          <div class="agile-strip">
+            <div class="agile-step"><strong>01 Research</strong>Интервьюирование и сбор болей, ожиданий, контекста роли.</div>
+            <div class="agile-step"><strong>02 Hypotheses</strong>Формирование гипотез по логике трека, формату и навигации.</div>
+            <div class="agile-step"><strong>03 Prototype</strong>Черновая структура программы и первых цифровых блоков.</div>
+            <div class="agile-step"><strong>04 Pilot</strong>Проверка решения на ограниченной выборке и сбор обратной связи.</div>
+            <div class="agile-step"><strong>05 Improve</strong>Доработка контента, пути пользователя и точек входа перед масштабированием.</div>
+          </div>
+        </section>
+
+        <section class="section-card reveal" id="solution">
+          <div class="section-kicker">03 • Решение</div>
+          <h2 class="section-title">Собрала обучение как последовательный путь</h2>
+          <div class="two-col">
+            <div class="mini-card">
+              <h4>Что вошло в решение</h4>
+              <ul class="list">
+                <li>логика входа в обучение и этапы погружения</li>
+                <li>структура программы по основным темам и задачам</li>
+                <li>цифровые страницы и визуальная упаковка материалов</li>
+                <li>понятные шаги для прохождения и самостоятельной навигации</li>
+              </ul>
+            </div>
+            <div class="mini-card">
+              <h4>Почему это сработало</h4>
+              <ul class="list">
+                <li>решение было собрано под конкретную аудиторию, а не «в целом»</li>
+                <li>материалы было легко читать и использовать</li>
+                <li>маршрут не был перегружен и давал ясный следующий шаг</li>
+                <li>структуру можно было развивать дальше без пересборки с нуля</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card reveal" id="impact">
+          <div class="section-kicker">04 • Результат</div>
+          <h2 class="section-title">Успешный запуск и основа для дальнейшего масштабирования</h2>
+          <div class="body-text">
+            В результате получился работающий обучающий контур для архитекторов: с понятной логикой, удобным цифровым форматом и возможностью дальнейшего развития через новые модули и доработки. Для меня это важный кейс, потому что он показывает мой основной стиль работы: собрать решение быстро, осмысленно и через итерации, а не через долгую линейную разработку.
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
     <div class="container">
       <div class="section-head reveal">
         <div>
-          <div class="section-kicker">Selected work</div>
-          <h2 class="section-title">Что я умею создавать</h2>
+          <div class="section-kicker">Other projects</div>
+          <h2 class="section-title">Другие кейсы</h2>
         </div>
-        <div class="section-intro">Ниже — четыре типа решений, которые лучше всего показывают мой релевантный опыт для ролей в Learning Experience, EdTech и L&D Product.</div>
+        <div class="section-intro" style="max-width:560px;">
+          Остальные проекты я тоже воспринимаю через agile-логику: сначала контекст и интервьюирование, затем тестирование решения и доработка до рабочего формата.
+        </div>
       </div>
 
-      <div class="work-grid">
-        <article class="work-card reveal">
-          <div class="work-tag">Learning journeys</div>
-          <h3>End-to-end программы и learning tracks</h3>
-          <p>Проектирую полный путь обучения, а не отдельные активности: вход в программу, последовательность, точки вовлечения, сопровождение пользователя и логика запуска.</p>
-          <ul class="work-points">
-            <li>Journey logic для конкретных аудиторий</li>
-            <li>Архитектура blended и digital formats</li>
-            <li>Понятный onboarding в learning experience</li>
-          </ul>
-          <div class="gallery" data-gallery>
-            <div class="gallery-viewport">
-              <div class="gallery-track">
-                <div class="gallery-slide">
-                  <img src="images/work1-slide1.png" alt="Learning journey — артефакт 1" class="gallery-image">
-                </div>
-                <div class="gallery-slide">
-                  <img src="images/work1-slide2.png" alt="Learning journey — артефакт 2" class="gallery-image">
-                </div>
-              </div>
-            </div>
-            <div class="gallery-caption">Артефакты показывают логику трека: от структуры программы и маршрута участника до экранов, через которые пользователь входит в обучение.</div>
-            <div class="gallery-controls">
-              <div class="gallery-dots">
-                <button class="gallery-dot is-active" type="button" aria-label="Слайд 1"></button>
-                <button class="gallery-dot" type="button" aria-label="Слайд 2"></button>
-              </div>
-              <div class="gallery-nav">
-                <button class="gallery-btn" type="button" data-prev aria-label="Назад">←</button>
-                <button class="gallery-btn" type="button" data-next aria-label="Вперёд">→</button>
+      <div class="project-grid">
+        <article class="project-link reveal">
+          <div class="tag">РСХБ-Интех • Development maps</div>
+          <h3>Внедрение карт развития по итогам оценки</h3>
+          <p>Полный цикл: интервьюирование, определение логики карт, подбор путей развития, связывание результатов оценки с конкретными действиями и форматами обучения.</p>
+          <div class="section-gap">
+            <div class="media-frame">
+              <!-- Вставь сюда скрин карт развития -->
+              <!-- Пример: <img src="images/dev-maps.jpg" alt="Карты развития по итогам оценки"> -->
+              <div class="media-placeholder">
+                <div class="media-badge">Case image</div>
+                <strong>Место для скрина карт развития</strong>
+                <div>Лучше всего подойдёт фрагмент карты развития, где видна логика маршрута и формат рекомендаций.</div>
               </div>
             </div>
           </div>
         </article>
 
-        <article class="work-card reveal">
-          <div class="work-tag">Post-assessment development</div>
-          <h3>Карты развития и post-assessment pathways</h3>
-          <p>Перевожу результаты оценки и требования к роли в практические варианты развития: learning options, on-the-job actions и логику следующего шага для сотрудника и руководителя.</p>
-          <ul class="work-points">
-            <li>Competency-to-action translation</li>
-            <li>Видимые пути развития и выбор</li>
-            <li>Поддержка руководителя в развитии сотрудника</li>
-          </ul>
-          <div class="gallery" data-gallery>
-            <div class="gallery-viewport">
-              <div class="gallery-track">
-                <div class="gallery-slide">
-                  <img src="images/work2-slide1.png" alt="Карта развития — артефакт 1" class="gallery-image">
-                </div>
-                <div class="gallery-slide">
-                  <img src="images/work2-slide2.png" alt="Карта развития — артефакт 2" class="gallery-image">
-                </div>
-              </div>
-            </div>
-            <div class="gallery-caption">Здесь видно, как результаты оценки превращаются в понятные варианты развития: маршрут, компетенция, рекомендуемые действия и следующая логика шага.</div>
-            <div class="gallery-controls">
-              <div class="gallery-dots">
-                <button class="gallery-dot is-active" type="button" aria-label="Слайд 1"></button>
-                <button class="gallery-dot" type="button" aria-label="Слайд 2"></button>
-              </div>
-              <div class="gallery-nav">
-                <button class="gallery-btn" type="button" data-prev aria-label="Назад">←</button>
-                <button class="gallery-btn" type="button" data-next aria-label="Вперёд">→</button>
+        <article class="project-link reveal">
+          <div class="tag">РСХБ-Интех • Peer learning</div>
+          <h3>Peer-to-peer обучение и HR Ambassadors</h3>
+          <p>Организация среды обмена знаниями: роли, коммуникации, демо-вебинары, поддержка внутренних экспертов и развитие культуры social learning.</p>
+          <div class="section-gap">
+            <div class="media-frame">
+              <!-- Вставь сюда скрин страницы амбассадоров или peer-to-peer -->
+              <!-- Пример: <img src="images/ambassadors.jpg" alt="Программа HR Ambassadors"> -->
+              <div class="media-placeholder">
+                <div class="media-badge">Case image</div>
+                <strong>Место для скрина peer-to-peer / ambassadors</strong>
+                <div>Сюда хорошо встанет страница программы, карточки активностей или визуал сообщества.</div>
               </div>
             </div>
           </div>
         </article>
 
-        <article class="work-card reveal">
-          <div class="work-tag">Social learning</div>
-          <h3>Peer-to-peer обучение и экспертные сообщества</h3>
-          <p>Создаю внутренние форматы обмена знаниями, где экспертиза становится видимой и применимой: peer learning, экспертные встречи, ambassador programs и community-based engagement.</p>
-          <ul class="work-points">
-            <li>Community-led learning design</li>
-            <li>Активация внутренних экспертов</li>
-            <li>Механики участия и вовлечения</li>
-          </ul>
-          <div class="gallery" data-gallery>
-            <div class="gallery-viewport">
-              <div class="gallery-track">
-                <div class="gallery-slide">
-                  <img src="images/work3-slide1.png" alt="Social learning — артефакт 1" class="gallery-image">
-                </div>
-                <div class="gallery-slide">
-                  <img src="images/work3-slide2.png" alt="Social learning — артефакт 2" class="gallery-image">
-                </div>
-              </div>
-            </div>
-            <div class="gallery-caption">Экран иллюстрирует, как внутренние эксперты становятся частью системы обучения: от оформления инициативы до конкретных активностей и механик участия.</div>
-            <div class="gallery-controls">
-              <div class="gallery-dots">
-                <button class="gallery-dot is-active" type="button" aria-label="Слайд 1"></button>
-                <button class="gallery-dot" type="button" aria-label="Слайд 2"></button>
-              </div>
-              <div class="gallery-nav">
-                <button class="gallery-btn" type="button" data-prev aria-label="Назад">←</button>
-                <button class="gallery-btn" type="button" data-next aria-label="Вперёд">→</button>
+        <article class="project-link reveal">
+          <div class="tag">PepsiCo • FMCG</div>
+          <h3>Развитие цифровой обучающей среды</h3>
+          <p>Опыт работы с массовыми аудиториями и корпоративными программами в FMCG: digital learning, поддержка платформ и адаптация решений под быстрый ритм бизнеса.</p>
+          <div class="section-gap">
+            <div class="media-frame">
+              <!-- Вставь сюда скрин платформы, витрины или обучающей среды -->
+              <!-- Пример: <img src="images/pepsico-learning.jpg" alt="Цифровая обучающая среда PepsiCo"> -->
+              <div class="media-placeholder">
+                <div class="media-badge">Case image</div>
+                <strong>Место для FMCG / digital learning скрина</strong>
+                <div>Лучше всего показать платформу, витрину материалов или аккуратную страницу программы.</div>
               </div>
             </div>
           </div>
         </article>
 
-        <article class="work-card reveal">
-          <div class="work-tag">Learning analytics</div>
-          <h3>Аналитика обучения и data-driven решения</h3>
-          <p>Использую данные обучения и развития для принятия решений: анализирую активность, охват, динамику и сигналы, которые помогают улучшать программы и learning experience.</p>
-          <ul class="work-points">
-            <li>Learning dashboards и аналитика использования</li>
-            <li>Метрики эффективности обучения</li>
-            <li>Данные для развития программ</li>
-          </ul>
-          <div class="gallery" data-gallery>
-            <div class="gallery-viewport">
-              <div class="gallery-track">
-                <div class="gallery-slide">
-                  <img src="images/work4-slide1.png" alt="Дашборд обучения — артефакт 1" class="gallery-image">
-                </div>
-                <div class="gallery-slide">
-                  <img src="images/work4-slide2.png" alt="Дашборд обучения — артефакт 2" class="gallery-image">
-                </div>
-              </div>
-            </div>
-            <div class="gallery-caption">Дашборды и отчёты показывают, как данные используются для принятия решений: что происходит с обучением, где есть рост и какие программы стоит усиливать дальше.</div>
-            <div class="gallery-controls">
-              <div class="gallery-dots">
-                <button class="gallery-dot is-active" type="button" aria-label="Слайд 1"></button>
-                <button class="gallery-dot" type="button" aria-label="Слайд 2"></button>
-              </div>
-              <div class="gallery-nav">
-                <button class="gallery-btn" type="button" data-prev aria-label="Назад">←</button>
-                <button class="gallery-btn" type="button" data-next aria-label="Вперёд">→</button>
+        <article class="project-link reveal">
+          <div class="tag">Cross-functional</div>
+          <h3>Обучение как продукт в кросс-функциональной среде</h3>
+          <p>Работа со стейкхолдерами, быстрые согласования, совместная доработка решений и выстраивание обучения как сервиса для бизнеса и сотрудника.</p>
+          <div class="section-gap">
+            <div class="media-frame">
+              <!-- Вставь сюда схему процесса, дашборд или визуал рабочего потока -->
+              <!-- Пример: <img src="images/process.jpg" alt="Кросс-функциональный процесс разработки обучения"> -->
+              <div class="media-placeholder">
+                <div class="media-badge">Case image</div>
+                <strong>Место для процессного или аналитического скрина</strong>
+                <div>Подойдёт дашборд, схема процесса, план-факт логика или визуал жизненного цикла проекта.</div>
               </div>
             </div>
           </div>
@@ -1054,50 +880,19 @@
       <div class="section-head reveal">
         <div>
           <div class="section-kicker">How I work</div>
-          <h2 class="section-title">Подход</h2>
-        </div>
-        <div class="section-intro">Для ролей на стыке EdTech и LXP моя ценность лежит в пересечении discovery, learner experience и product improvement.</div>
-      </div>
-
-      <div class="capability-grid">
-        <div class="capability-card reveal">
-          <h3>Discovery со стейкхолдерами</h3>
-          <p>Уточняю бизнес-задачу, различия аудиторий и рабочий контекст до того, как предлагать learning solution.</p>
-        </div>
-        <div class="capability-card reveal">
-          <h3>Проектирование learner journey</h3>
-          <p>Продумываю, как пользователь входит в обучение, проходит его, завершает и применяет результат, а не только какой контент видит.</p>
-        </div>
-        <div class="capability-card reveal">
-          <h3>Digital environment thinking</h3>
-          <p>Рассматриваю порталы, LMS-страницы и навигацию как часть learning product, а не как отдельный административный слой.</p>
-        </div>
-        <div class="capability-card reveal">
-          <h3>Итеративное улучшение</h3>
-          <p>Использую пилоты, feedback и learning signals, чтобы уточнять решение и повышать его adoption с течением времени.</p>
+          <h2 class="section-title">Agile — мой основной подход</h2>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="container">
-      <div class="section-head reveal">
-        <div>
-          <div class="section-kicker">Positioning</div>
-          <h2 class="section-title">Как я себя позиционирую</h2>
+      <div class="section-card reveal">
+        <div class="body-text">
+          Я использую agile как основной подход в обучающих проектах, потому что он помогает не переусложнять решение на старте и быстрее приходить к рабочему результату. Для меня это означает короткие циклы, постоянную связь со стейкхолдерами, проверку гипотез на ранних этапах и готовность пересобирать отдельные элементы, если это улучшает опыт пользователя.
         </div>
-      </div>
-
-      <div class="about-grid">
-        <div class="section-card reveal">
-          <h3>Learning Experience / L&D Product specialist</h3>
-          <p>Сильнее всего я раскрываюсь в ролях, где обучение нужно проектировать как цельный продукт: релевантный бизнесу, интуитивный для пользователей и устойчивый внутри цифровой экосистемы.</p>
-        </div>
-
-        <div class="section-card reveal">
-          <h3>Что я привношу</h3>
-          <p>Структурное мышление, ясную визуальную организацию, чувствительность к аудитории, сильное взаимодействие со стейкхолдерами и умение переводить сложную логику развития в usable learning experiences.</p>
+        <div class="chips">
+          <div class="chip">короткие итерации</div>
+          <div class="chip">co-creation со стейкхолдерами</div>
+          <div class="chip">rapid prototyping</div>
+          <div class="chip">feedback-driven improvement</div>
+          <div class="chip">масштабирование после пилота</div>
         </div>
       </div>
     </div>
@@ -1111,14 +906,12 @@
           <h2 class="section-title">Связаться со мной</h2>
         </div>
       </div>
-
       <div class="contact-grid">
         <div class="contact-card reveal">
           <h3>Email</h3>
-          <p>Добавь сюда свою почту для откликов и профессиональных контактов.</p>
+          <p>Здесь можно разместить актуальную почту для откликов.</p>
           <a class="contact-link" href="mailto:vera@example.com">vera@example.com</a>
         </div>
-
         <div class="contact-card reveal">
           <h3>Резюме / профиль</h3>
           <p>Сюда можно поставить ссылку на HH, LinkedIn или PDF-резюме.</p>
@@ -1133,7 +926,7 @@
       <div class="footer-box reveal">
         <div>
           <strong>Вера Свешникова</strong>
-          <div class="footer-text">Learning Experience • L&D Product • Digital Learning</div>
+          <div class="footer-text">Learning Experience • Agile • Digital Learning</div>
         </div>
         <a class="btn btn-secondary" href="#top" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">Наверх</a>
       </div>
@@ -1151,50 +944,6 @@
     }, { threshold: 0.12 });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    document.querySelectorAll('[data-gallery]').forEach((gallery) => {
-      const track = gallery.querySelector('.gallery-track');
-      const slides = Array.from(gallery.querySelectorAll('.gallery-slide'));
-      const prevBtn = gallery.querySelector('[data-prev]');
-      const nextBtn = gallery.querySelector('[data-next]');
-      const dots = Array.from(gallery.querySelectorAll('.gallery-dot'));
-
-      if (!track || slides.length === 0) return;
-
-      let index = 0;
-      const maxIndex = slides.length - 1;
-
-      const updateDots = () => {
-        dots.forEach((dot, i) => {
-          dot.classList.toggle('is-active', i === index);
-        });
-      };
-
-      const render = () => {
-        track.style.transform = `translateX(-${index * 100}%)`;
-        updateDots();
-      };
-
-      prevBtn?.addEventListener('click', () => {
-        index = index <= 0 ? maxIndex : index - 1;
-        render();
-      });
-
-      nextBtn?.addEventListener('click', () => {
-        index = index >= maxIndex ? 0 : index + 1;
-        render();
-      });
-
-      dots.forEach((dot, i) => {
-        dot.addEventListener('click', () => {
-          index = i;
-          render();
-        });
-      });
-
-      window.addEventListener('resize', render);
-      render();
-    });
   </script>
 </body>
 </html>
